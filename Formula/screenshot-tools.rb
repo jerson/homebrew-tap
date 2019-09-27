@@ -6,22 +6,25 @@ class ScreenshotTools < Formula
   head "https://github.com/jerson/screenshot-tools.git"
 
   depends_on "go" => :build
+ #depends_on "upx" => :build
+ #depends_on "make" => :build
 
   def install
+    ENV["CGO_ENABLED"] = "1"
+    ENV["GO111MODULE"] = "off"
+    ENV["GOPATH"] =  ENV["GOPATH"] || "#{ENV["HOME"]}/go"
+    system "go", "get", "-u", "github.com/gobuffalo/packr/v2/packr2"
     ENV["GO111MODULE"] = "on"
-    ENV["CGO_ENABLED"] = "0"
-    ENV["GOPATH"] = buildpath
-    system "go get -u github.com/gobuffalo/packr/v2/packr2"
-    system "packr2", "build", "-o", bin/"screenshot-tools"
-    #bin.install bin/"screenshot-tools"
+    ENV["PATH"] = PATH.new( "#{ENV["GOPATH"]}/bin" , ENV["PATH"])
+    system "packr2", "build", "-o", "screenshot-tools"
+    #system "make", "build"
+    bin.install "screenshot-tools" 
 
   end
+
 
   test do
-    ENV["GOPATH"] = testpath
-    dir = testpath/"jerson/screenshot-tools"
-    mkdir dir
-    system "git", "clone", "https://github.com/jerson/screenshot-tools.git", dir
-    system "go", "test", "./..."
+    system "#{bin}/screenshot-tools", "--help"
   end
+
 end
