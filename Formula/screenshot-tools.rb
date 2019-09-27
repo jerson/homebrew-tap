@@ -16,7 +16,9 @@ class ScreenshotTools < Formula
     system "go", "get", "-u", "github.com/gobuffalo/packr/v2/packr2"
     ENV["GO111MODULE"] = "on"
     ENV["PATH"] = PATH.new( "#{ENV["GOPATH"]}/bin" , ENV["PATH"])
-    system "packr2", "build", "-o", "screenshot-tools"
+    system "go generate"
+    system "packr2"
+    system "go", "build", "-o", "screenshot-tools"
     #system "make", "build"
     bin.install "screenshot-tools" 
 
