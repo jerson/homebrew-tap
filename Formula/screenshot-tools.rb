@@ -2,20 +2,20 @@
 class ScreenshotTools < Formula
   desc "Screenshot tools for take and merge."
   homepage "https://github.com/jerson/screenshot-tools"
-  version "0.1.10"
+  version "0.1.11"
   bottle :unneeded
 
   if OS.mac?
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/jerson/screenshot-tools/archive/v0.1.10.tar.gz"
-      sha256 "0a061ca7d668f5df347eef032c99a1ac6109d1637935ca8fb443ad823135b944"
+      url "https://github.com/jerson/screenshot-tools/archive/v0.1.11.tar.gz"
+      sha256 "190258e7a1af78e711764e1538249bf532cb206b58bae3e8c90f5d1bb04185fd"
     end
   end
   
   head "https://github.com/jerson/screenshot-tools.git"
   
-  depends_on "go => :build"
+  depends_on "go"
 
   def install
     ENV["CGO_ENABLED"] = "1"
