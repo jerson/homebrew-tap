@@ -2,24 +2,24 @@
 class Pgrok < Formula
   desc "Introspected tunnels to localhost a fork from pgrok."
   homepage "https://github.com/jerson/pgrok"
-  version "3.0.8"
+  version "3.0.9"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/jerson/pgrok/releases/download/v3.0.8/pgrok_3.0.8_Darwin_x86_64.tar.gz"
-    sha256 "4d2579c57905443a290f485bc1d7fe45351f498c48d075f8ad7abce27783a546"
+    url "https://github.com/jerson/pgrok/releases/download/v3.0.9/pgrok_3.0.9_Darwin_x86_64.tar.gz"
+    sha256 "93ad5b821fd289e0a5a29b14174bea03a258a63d023f90063e80b6734da8ef52"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/jerson/pgrok/releases/download/v3.0.8/pgrok_3.0.8_Linux_x86_64.tar.gz"
-      sha256 "9ad44d580c295f8f3ea5085a1b20a28c26ec87747d09a8f14075c92481bfb43d"
+      url "https://github.com/jerson/pgrok/releases/download/v3.0.9/pgrok_3.0.9_Linux_x86_64.tar.gz"
+      sha256 "95e37486d1b9c0efe560ab755f54b0cf4c1e4ff8414928479d7bfcf7bb89eec1"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jerson/pgrok/releases/download/v3.0.8/pgrok_3.0.8_Linux_arm64.tar.gz"
-        sha256 "bd19bba4a00ca63bd7ae944a975c02c5b6b98195f0fa909466579bedb94aa9d1"
+        url "https://github.com/jerson/pgrok/releases/download/v3.0.9/pgrok_3.0.9_Linux_arm64.tar.gz"
+        sha256 "3c77f3e1c785ceb3aef24f909f30a1e6408d1294ce53f2a2c28164a73eaa2107"
       else
-        url "https://github.com/jerson/pgrok/releases/download/v3.0.8/pgrok_3.0.8_Linux_armv6.tar.gz"
-        sha256 "87652d4e9b5cd7008370699c7235373e0a0222a953b2a384d88031cca40f4421"
+        url "https://github.com/jerson/pgrok/releases/download/v3.0.9/pgrok_3.0.9_Linux_armv6.tar.gz"
+        sha256 "cbffc5cac2f4e54b27da5821d92da1efe5c54e242e4c261de715fa5e2e1b06ea"
       end
     end
   end
