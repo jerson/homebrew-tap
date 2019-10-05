@@ -1,8 +1,8 @@
 class ScreenshotTools < Formula
   desc "Screenshot tools for take and merge"
   homepage "https://github.com/jerson/screenshot-tools"
-  url "https://github.com/jerson/screenshot-tools/archive/v0.1.12.tar.gz"
-  sha256 "5af13d019c10f32a62fde33a0f368e48e3d096ddff672ff624249abe3db0967c"
+  url "https://github.com/jerson/screenshot-tools/archive/v0.2.0.tar.gz"
+  sha256 "7143721a7195104740d92a461bb5596df9c18b99b0f4522f9a274cd0139210d1"
   head "https://github.com/jerson/screenshot-tools.git"
 
   depends_on "go" => :build
