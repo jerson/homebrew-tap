@@ -5,32 +5,28 @@
 class Pgrokd < Formula
   desc "Server introspected tunnels to localhost a fork from pgrok."
   homepage "https://github.com/jerson/pgrok"
-  version "3.2.2"
+  version "3.2.3"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.2/pgrokd_3.2.2_MacOS_x86_64.tar.gz"
-      sha256 "9fb41687fc1c01ef316480be86a2dcb998d6ddf569656e86ed920de7c5ff94bc"
+      url "https://github.com/jerson/pgrok/releases/download/v3.2.3/pgrokd_3.2.3_MacOS_x86_64.tar.gz"
+      sha256 "b8b5b0fb1b4548630f8501fd3e1eeaa526447d52deb8b4e5b0d5645865ea4d5c"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.2/pgrokd_3.2.2_MacOS_arm64.tar.gz"
-      sha256 "a82e2783b506d7ab3a24454e8a429f5095a09ca6261ead99114d86a93c9bdc53"
+      url "https://github.com/jerson/pgrok/releases/download/v3.2.3/pgrokd_3.2.3_MacOS_arm64.tar.gz"
+      sha256 "75615dfdb36a5c9189ef63159cdf81a073e19ba88d4702184594832eb22fda75"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.2/pgrokd_3.2.2_Linux_x86_64.tar.gz"
-      sha256 "a1780734f343a2790c7a892d910e956f697b385dd111fd11575e1d1eb7c3e57f"
-    end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.2/pgrokd_3.2.2_Linux_armv6.tar.gz"
-      sha256 "5d38f47242fa0d31cf0f73a78be9480cac8be3953a1f23d1ab6ea2578bb00102"
+      url "https://github.com/jerson/pgrok/releases/download/v3.2.3/pgrokd_3.2.3_Linux_x86_64.tar.gz"
+      sha256 "f97d0db95490bc428529699990dae7627a89356000c8b4827f8b3452af50353c"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.2/pgrokd_3.2.2_Linux_arm64.tar.gz"
-      sha256 "be69ff0a7fc4a16b6677a64da2acff627f528df7c869d5479ad5847f18633af0"
+      url "https://github.com/jerson/pgrok/releases/download/v3.2.3/pgrokd_3.2.3_Linux_arm64.tar.gz"
+      sha256 "f2c651d2c413a35ffcaad9d7698677a38ff9b1054b42a7f74794292afbf6dde1"
     end
   end
 
