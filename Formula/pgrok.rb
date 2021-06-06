@@ -5,32 +5,28 @@
 class Pgrok < Formula
   desc "Introspected tunnels to localhost a fork from pgrok."
   homepage "https://github.com/jerson/pgrok"
-  version "3.2.2"
+  version "3.2.3"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.2/pgrok_3.2.2_MacOS_x86_64.tar.gz"
-      sha256 "18ecaacd568c12060b715577080f0f9cb254b8d031b8df51959189d99b394bb9"
+      url "https://github.com/jerson/pgrok/releases/download/v3.2.3/pgrok_3.2.3_MacOS_x86_64.tar.gz"
+      sha256 "429ca2f4dc3d985501f73f16c889f9294733336c59520d518d38bbe495ed4af1"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.2/pgrok_3.2.2_MacOS_arm64.tar.gz"
-      sha256 "d881c98fe7380f092b2797cbdee6f41dadc3be36be76b1971fa40e4e70a33d49"
+      url "https://github.com/jerson/pgrok/releases/download/v3.2.3/pgrok_3.2.3_MacOS_arm64.tar.gz"
+      sha256 "1aef9b0d1328fd410a987535258b2a9bb83506bb991ed408725d6519acbe89eb"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.2/pgrok_3.2.2_Linux_x86_64.tar.gz"
-      sha256 "b78e03bcd34268ea64ef87045417aab45eb29fad5785663cb35457eab1467710"
-    end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.2/pgrok_3.2.2_Linux_armv6.tar.gz"
-      sha256 "5013ddb48d42d4775b708b0e7c0a23e0d0d6762e477b6ba1f7acd37e6a0146de"
+      url "https://github.com/jerson/pgrok/releases/download/v3.2.3/pgrok_3.2.3_Linux_x86_64.tar.gz"
+      sha256 "d8adbad9f8d160dace11d5a1e49ebad884f476e74165c9d068528da32c19cd86"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.2/pgrok_3.2.2_Linux_arm64.tar.gz"
-      sha256 "23939f32caf86c54ae5b1c86ca508d2a709a69309cdd7b25609f9c03a9387825"
+      url "https://github.com/jerson/pgrok/releases/download/v3.2.3/pgrok_3.2.3_Linux_arm64.tar.gz"
+      sha256 "472cf5a1229fa86e12f85a2df849d08c7617ac59f2c2ea84bbe803f88847b1fd"
     end
   end
 
