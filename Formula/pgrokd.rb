@@ -5,28 +5,28 @@
 class Pgrokd < Formula
   desc "Server introspected tunnels to localhost a fork from pgrok."
   homepage "https://github.com/jerson/pgrok"
-  version "3.2.4"
+  version "3.2.5"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.4/pgrokd_3.2.4_MacOS_x86_64.tar.gz"
-      sha256 "fb51d23f963a9201c503d084f09b204b24f920ef85dbcb473675392cd483926f"
+      url "https://github.com/jerson/pgrok/releases/download/v3.2.5/pgrokd_3.2.5_MacOS_x86_64.tar.gz"
+      sha256 "45f4aef9d92bd938002aea03e7024ed479fe1bac48c965ca55a459314e76cf70"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.4/pgrokd_3.2.4_MacOS_arm64.tar.gz"
-      sha256 "2f71888a6d0a4c52031d544a2ee4e927581a2343857ef51e0677992088bfe753"
+      url "https://github.com/jerson/pgrok/releases/download/v3.2.5/pgrokd_3.2.5_MacOS_arm64.tar.gz"
+      sha256 "49615e37012efd458caadb370579da610d46530f02ceb16653054ebf16de06be"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.4/pgrokd_3.2.4_Linux_x86_64.tar.gz"
-      sha256 "52c51e88631a8d66a54a490747741af317ff6d7bc11b92f3cae3af5974d3c666"
+      url "https://github.com/jerson/pgrok/releases/download/v3.2.5/pgrokd_3.2.5_Linux_x86_64.tar.gz"
+      sha256 "b90284ce1a19875047719d0e2501c6573b23319cb1d24d6a0257081b739d4853"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.4/pgrokd_3.2.4_Linux_arm64.tar.gz"
-      sha256 "864a0f05383bc92a930c103b6175ddab353e394905ed4f1a45ce8491053adb63"
+      url "https://github.com/jerson/pgrok/releases/download/v3.2.5/pgrokd_3.2.5_Linux_arm64.tar.gz"
+      sha256 "e25c59b8d7ec082a231ca476aeebe0169bf68ee9ed7f681fc17f88d6807bbb9f"
     end
   end
 
