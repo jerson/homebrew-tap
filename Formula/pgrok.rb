@@ -5,33 +5,44 @@
 class Pgrok < Formula
   desc "Introspected tunnels to localhost a fork from pgrok."
   homepage "https://github.com/jerson/pgrok"
-  version "3.2.6"
-  bottle :unneeded
+  version "3.2.7"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.6/pgrok_3.2.6_MacOS_x86_64.tar.gz"
-      sha256 "867a1fa1dc09aaa64f26ade3a80845147d740f80ec77f05c0fd794979aee3cb4"
+      url "https://github.com/jerson/pgrok/releases/download/v3.2.7/pgrok_3.2.7_MacOS_x86_64.tar.gz"
+      sha256 "e09d02fb66cea9acfff47e63d57e6d5ffabe9cd93b4092c7d03522d773e3a129"
+
+      def install
+        bin.install "pgrok"
+      end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.6/pgrok_3.2.6_MacOS_arm64.tar.gz"
-      sha256 "f41ceebd90508bacb2631d2bc180c057091148ceed981e38a5ef02416e9668e7"
+      url "https://github.com/jerson/pgrok/releases/download/v3.2.7/pgrok_3.2.7_MacOS_arm64.tar.gz"
+      sha256 "bc4bbd975fc3bafe03a3c7f7dbd255d5b5a581cc53d87744fe47dc3da50bd8c0"
+
+      def install
+        bin.install "pgrok"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.6/pgrok_3.2.6_Linux_x86_64.tar.gz"
-      sha256 "16373decba1d296e568fad6910623ea4ab5b4849715a69c2c6d43a38b092afb0"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.6/pgrok_3.2.6_Linux_arm64.tar.gz"
-      sha256 "a206c8cdaea10ee836775dfdf5f51610cbbf64f52afed636f5bb1d379d6bbc64"
-    end
-  end
+      url "https://github.com/jerson/pgrok/releases/download/v3.2.7/pgrok_3.2.7_Linux_arm64.tar.gz"
+      sha256 "88facacd871d0f63be612e3e48a0515a73145454052e2aaac61e9f63b5355670"
 
-  def install
-    bin.install "pgrok"
+      def install
+        bin.install "pgrok"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/jerson/pgrok/releases/download/v3.2.7/pgrok_3.2.7_Linux_x86_64.tar.gz"
+      sha256 "3e184e53d3764fe4f28ccebb13bfb052b2a3bb6f30534015b5b15c54baef8def"
+
+      def install
+        bin.install "pgrok"
+      end
+    end
   end
 
   test do
