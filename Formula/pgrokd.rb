@@ -5,33 +5,44 @@
 class Pgrokd < Formula
   desc "Server introspected tunnels to localhost a fork from pgrok."
   homepage "https://github.com/jerson/pgrok"
-  version "3.2.6"
-  bottle :unneeded
+  version "3.2.7"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.6/pgrokd_3.2.6_MacOS_x86_64.tar.gz"
-      sha256 "6bcdfc93b2c8697606fa7d882709cc11f7c57b683cc49ea96d46f00e2adae8e8"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.6/pgrokd_3.2.6_MacOS_arm64.tar.gz"
-      sha256 "9e6ed245fc1c0d38ba0680b4234c60dea67dd299d55acf9e0bb70a664f8854e8"
+      url "https://github.com/jerson/pgrok/releases/download/v3.2.7/pgrokd_3.2.7_MacOS_arm64.tar.gz"
+      sha256 "5949642b4cb52243d339cdaec56ec2f3cf03338f178db3e3c953d6b368bdf42f"
+
+      def install
+        bin.install "pgrokd"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/jerson/pgrok/releases/download/v3.2.7/pgrokd_3.2.7_MacOS_x86_64.tar.gz"
+      sha256 "6072044d01b83f2b07674cb47c69fa1eba2238d43dba897e60c30f87eef1f270"
+
+      def install
+        bin.install "pgrokd"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.6/pgrokd_3.2.6_Linux_x86_64.tar.gz"
-      sha256 "a0b9d77bbdf3cf3aac89f4bc6d99c07c792d14e1287d144ae5630270b542ff4d"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.6/pgrokd_3.2.6_Linux_arm64.tar.gz"
-      sha256 "0644fd7fab668e9453e72c067601dd8eed93cd26db0fa177f10db9b49e9706f5"
-    end
-  end
+      url "https://github.com/jerson/pgrok/releases/download/v3.2.7/pgrokd_3.2.7_Linux_arm64.tar.gz"
+      sha256 "cc1ab0953f9616ca1508d777884425ca2a947e999e4fc61380ac58002a525ee9"
 
-  def install
-    bin.install "pgrokd"
+      def install
+        bin.install "pgrokd"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/jerson/pgrok/releases/download/v3.2.7/pgrokd_3.2.7_Linux_x86_64.tar.gz"
+      sha256 "84d74978b692eaa65956b71a2718a70bd9a4e3de7795c938d58d2c2c83e317ce"
+
+      def install
+        bin.install "pgrokd"
+      end
+    end
   end
 
   test do
