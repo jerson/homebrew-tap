@@ -5,20 +5,20 @@
 class Pgrokd < Formula
   desc "Server introspected tunnels to localhost a fork from pgrok."
   homepage "https://github.com/jerson/pgrok"
-  version "3.2.7"
+  version "3.2.8"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.7/pgrokd_3.2.7_MacOS_arm64.tar.gz"
-      sha256 "5949642b4cb52243d339cdaec56ec2f3cf03338f178db3e3c953d6b368bdf42f"
+      url "https://github.com/jerson/pgrok/releases/download/v3.2.8/pgrokd_3.2.8_MacOS_arm64.tar.gz"
+      sha256 "e5ba7efe4cfc2d5bfcdd8514157fc8120f215e4672132df3af6508cb165796fe"
 
       def install
         bin.install "pgrokd"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.7/pgrokd_3.2.7_MacOS_x86_64.tar.gz"
-      sha256 "6072044d01b83f2b07674cb47c69fa1eba2238d43dba897e60c30f87eef1f270"
+      url "https://github.com/jerson/pgrok/releases/download/v3.2.8/pgrokd_3.2.8_MacOS_x86_64.tar.gz"
+      sha256 "90b103b2fb008d1cd7dd6db1a34baa26b67abe859cdc8ec31bfeee8bf8e15abd"
 
       def install
         bin.install "pgrokd"
@@ -28,16 +28,16 @@ class Pgrokd < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.7/pgrokd_3.2.7_Linux_arm64.tar.gz"
-      sha256 "cc1ab0953f9616ca1508d777884425ca2a947e999e4fc61380ac58002a525ee9"
+      url "https://github.com/jerson/pgrok/releases/download/v3.2.8/pgrokd_3.2.8_Linux_arm64.tar.gz"
+      sha256 "45789bcb05b6a290fd8d6b12e89a619111ad7308ad50cd7f0a50a79e481dae02"
 
       def install
         bin.install "pgrokd"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.7/pgrokd_3.2.7_Linux_x86_64.tar.gz"
-      sha256 "84d74978b692eaa65956b71a2718a70bd9a4e3de7795c938d58d2c2c83e317ce"
+      url "https://github.com/jerson/pgrok/releases/download/v3.2.8/pgrokd_3.2.8_Linux_x86_64.tar.gz"
+      sha256 "54913ce6f0eb2dc22f2b115f3a53e489febbc0e1839311d2f0f6a110615f9738"
 
       def install
         bin.install "pgrokd"
