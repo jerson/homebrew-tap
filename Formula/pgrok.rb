@@ -5,20 +5,20 @@
 class Pgrok < Formula
   desc "Introspected tunnels to localhost a fork from pgrok."
   homepage "https://github.com/jerson/pgrok"
-  version "3.2.7"
+  version "3.2.8"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.7/pgrok_3.2.7_MacOS_x86_64.tar.gz"
-      sha256 "e09d02fb66cea9acfff47e63d57e6d5ffabe9cd93b4092c7d03522d773e3a129"
+      url "https://github.com/jerson/pgrok/releases/download/v3.2.8/pgrok_3.2.8_MacOS_x86_64.tar.gz"
+      sha256 "659ba808ef2b0f19802573b0b39ad556c7dad0d6e1ab0681a1dfde5d567fc9ed"
 
       def install
         bin.install "pgrok"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.7/pgrok_3.2.7_MacOS_arm64.tar.gz"
-      sha256 "bc4bbd975fc3bafe03a3c7f7dbd255d5b5a581cc53d87744fe47dc3da50bd8c0"
+      url "https://github.com/jerson/pgrok/releases/download/v3.2.8/pgrok_3.2.8_MacOS_arm64.tar.gz"
+      sha256 "af22d150c14e2b4bdeb6c7bece48aaee8acfced97b1b5ea400467722401c8fad"
 
       def install
         bin.install "pgrok"
@@ -27,17 +27,17 @@ class Pgrok < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.7/pgrok_3.2.7_Linux_arm64.tar.gz"
-      sha256 "88facacd871d0f63be612e3e48a0515a73145454052e2aaac61e9f63b5355670"
+    if Hardware::CPU.intel?
+      url "https://github.com/jerson/pgrok/releases/download/v3.2.8/pgrok_3.2.8_Linux_x86_64.tar.gz"
+      sha256 "383641e232de99ac46f9722c347ed20487b32b3f5493cd86e14cc142718078df"
 
       def install
         bin.install "pgrok"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/jerson/pgrok/releases/download/v3.2.7/pgrok_3.2.7_Linux_x86_64.tar.gz"
-      sha256 "3e184e53d3764fe4f28ccebb13bfb052b2a3bb6f30534015b5b15c54baef8def"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/jerson/pgrok/releases/download/v3.2.8/pgrok_3.2.8_Linux_arm64.tar.gz"
+      sha256 "459c74a6b8894acc99697f86b3759869534b0ffed094ec50963405460f11233e"
 
       def install
         bin.install "pgrok"
